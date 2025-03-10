@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Agent</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Form Styles */
+        form {
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #0073e6;
+            outline: none;
+            box-shadow: 0px 0px 5px rgba(0, 115, 230, 0.3);
+        }
+
+        /* Submit Button */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #005bb5;
+        }
+
+        /* Agent Details */
+        .agent {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .agent img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 10px;
+            border: 2px solid #0073e6;
+        }
+
+        .agent p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact the Agent</h1>
+        <p>Fill in the form below to inquire about a house.</p>
+
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <div class="agent">
+            <h2>Agent Details</h2>
+            <img src="agent.jpg" alt="Agent">
+            <p><strong>Name:</strong> BALA</p>
+            <p><strong>Phone:</strong> +91 98765 xxxxx</p>
+            <p><strong>Email:</strong> jaibalaya@gmail.com</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your inquiry has been submitted successfully!");
+            window.location.href = "thankyou.html"; // Redirect to thank-you page
+        });
+    </script>
+</body>
+</html>

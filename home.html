@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Real Estate</title>
+    <style>
+        /* General Styling */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background-color: #f0f2f5; color: #333; }
+
+        /* Header Styling */
+        .header { 
+            background: linear-gradient(to right, #004d99, #0073e6);
+            color: white; 
+            padding: 25px; 
+            text-align: center; 
+            font-size: 32px; 
+            font-weight: bold; 
+            letter-spacing: 1px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Listings Grid */
+        .listings { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            padding: 30px; 
+            justify-content: center;
+        }
+
+        /* Property Card */
+        .property { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); 
+            text-align: center; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            cursor: pointer;
+        }
+
+        /* Hover Effect */
+        .property:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Property Image */
+        .property img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Zoom Effect on Image Hover */
+        .property:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Property Details */
+        .property h3 { 
+            margin: 15px 0 10px; 
+            font-size: 20px; 
+            color: #004d99;
+        }
+        .property p { 
+            font-size: 18px; 
+            color: #555; 
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .listings { 
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+                padding: 20px;
+            }
+            .header {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">🏡 Find Your Dream Home</div>
+	
+    <div class="listings">
+        <div class="property">
+            <a href="house1.html">
+                <img src="house1.jpg" alt="House 1">
+                <h3>Modern Family House</h3>
+                <p>₹4.1 Crore - 1,800 sq ft</p>
+            </a>
+        </div>
+        <div class="property">
+            <a href="house2.html">
+                <img src="house2.jpg" alt="House 2">
+                <h3>Luxury Villa</h3>
+                <p>₹9.8 Crore - 3,500 sq ft</p>
+            </a>
+        </div>
+        <div class="property">
+            <a href="house3.html">
+                <img src="house3.jpg" alt="House 3">
+                <h3>Cozy House</h3>
+                <p>₹2.9 Crore - 1,500 sq ft</p>
+            </a>
+        </div>
+	    <div class="property">
+            <a href="house4.html">
+                <img src="house4.jpg" alt="House 4">
+                <h3>Spacious Townhouse</h3>
+                <p>₹7.5 Crore - 3,200 sq ft</p>
+            </a>
+        </div>
+	    <div class="property">
+            <a href="house5.html">
+                <img src="house5.jpg" alt="House 5">
+                <h3>Beachfront House</h3>
+                <p>₹12.3 Crore - 4,000 sq ft</p>
+            </a>
+        </div>
+	    <div class="property">
+            <a href="house6.html">
+                <img src="house6.jpg" alt="House 6">
+                <h3>Urban Bungalow</h3>
+                <p>₹6.5 Crore - 2,500 sq ft</p>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
